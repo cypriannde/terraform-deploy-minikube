@@ -1,12 +1,12 @@
-resource "kubernetes_namespace" tech" {
+resource "kubernetes_namespace" "zsoftly" {
   metadata {
     name = "k8s-ns-by-tf"
   }
 }
 
-resource "kubernetes_deployment" "tech" {
+resource "kubernetes_deployment" "zsoftly" {
   metadata {
-    name = "terraform-tech"
+    name = "terraform-zsoftly"
     labels = {
       test = "MyExampleApp"
     }
@@ -47,3 +47,5 @@ resource "kubernetes_deployment" "tech" {
         }
       }
     }
+  }
+}
